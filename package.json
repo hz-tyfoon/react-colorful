@@ -22,8 +22,9 @@
     "size": "npm run build && size-limit",
     "check-types": "tsc --noEmit true",
     "test": "jest tests --coverage",
-    "build": "del-cli 'dist/*' && microbundle build --entry src/index.ts --jsx React.createElement --name react-colorful --css inline --tsconfig tsconfig.build.json",
-    "watch": "microbundle watch --entry src/index.ts --jsx React.createElement --name react-colorful --css inline --tsconfig tsconfig.build.json --no-compress",
+    "build": "del-cli 'dist/*' && microbundle build --entry src/index.ts --jsx React.createElement --name react-colorful --css inline --tsconfig tsconfig.build.json --no-compress",
+    "dev": "microbundle watch --entry src/index.ts --jsx React.createElement --name react-colorful --css inline --tsconfig tsconfig.build.json --no-compress",
+    "watch": "nodemon --watch src --ext js,jsx,ts,tsx --exec npm run build",
     "postbuild": "cpy dist/index.module.js dist --rename=index.mjs && cpy dist/index.module.js.map dist --rename=index.mjs.map",
     "prepublishOnly": "npm run build",
     "check-release": "npm publish --dry-run",
@@ -196,6 +197,8 @@
     "size-limit": "^4.10.1",
     "ts-jest": "^26.5.3",
     "typescript": "^4.2.3",
-    "use-throttled-effect": "0.0.7"
+    "use-throttled-effect": "0.0.7",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2"
   }
 }
