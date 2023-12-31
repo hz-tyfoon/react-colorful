@@ -22,3 +22,34 @@ export { RgbColor, RgbaColor, HslColor, HslaColor, HsvColor, HsvaColor } from ".
 
 // Tooling
 export { setNonce } from "./utils/nonce";
+
+//
+// Extra Exports by Hanzala Taifun
+export { AlphaColorPicker } from "./components/common/AlphaColorPicker";
+export { ColorModel, ColorPickerBaseProps, AnyColor } from "./types";
+export { equalColorObjects } from "./utils/compare";
+export { rgbaToHsva, hsvaToRgba } from "./utils/convert";
+
+export { Hue } from "./components/common/Hue";
+export { Saturation } from "./components/common/Saturation";
+export { Alpha } from "./components/common/Alpha";
+
+export { useColorManipulation } from "./hooks/useColorManipulation";
+export { useStyleSheet } from "./hooks/useStyleSheet";
+export { formatClassName } from "./utils/format";
+
+// Components from Demo folder start
+export {
+  GlobalStyles,
+  Header,
+  HeaderContent,
+  HeaderDemo,
+  HeaderDemoPicker,
+  HeaderDescription,
+  HeaderTitle,
+  Link,
+  LinkStarIcon,
+  Links,
+  LinkSeparator,
+} from "../demo/src/styles";
+// Components from Demo folder end
